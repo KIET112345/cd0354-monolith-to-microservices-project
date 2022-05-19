@@ -24,18 +24,18 @@ script:
   # Do similar for other three images
 
   # Tagging
-  - docker tag udagram-reverseproxy kiet112345/udagram-reverseproxy:v1
-  - docker tag udagram-api-feed kiet112345/udagram-api-feed:v1
-  - docker tag udagram-api-user kiet112345/udagram-api-user:v1
-  - docker tag udagram-frontend kiet112345/udagram-frontend:v1
+  - docker tag udagram-reverseproxy kiet112345/udagram-reverseproxy:v2
+  - docker tag udagram-api-feed kiet112345/udagram-api-feed:v2
+  - docker tag udagram-api-user kiet112345/udagram-api-user:v2
+  - docker tag udagram-frontend kiet112345/udagram-frontend:v2
   # Do similar for other three images
 
 after_success:
   # Push
   # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push kiet112345/udagram-reverseproxy:v1
-  - docker push kiet112345/udagram-api-feed:v1
-  - docker push kiet112345/udagram-api-user:v1
-  - docker push kiet112345/udagram-frontend:v1
+  - docker push kiet112345/udagram-reverseproxy:v2
+  - docker push kiet112345/udagram-api-feed:v2
+  - docker push kiet112345/udagram-api-user:v2
+  - docker push kiet112345/udagram-frontend:v2
   # Do similar for other three images
