@@ -24,7 +24,7 @@ script:
   # Do similar for other three images
 
   # Tagging
-  - docker tag udagram-reverseproxy kiet112345/reverseproxy:v1
+  - docker tag udagram-reverseproxy kiet112345/udagram-reverseproxy:v1
   - docker tag udagram-api-feed kiet112345/udagram-api-feed:v1
   - docker tag udagram-api-user kiet112345/udagram-api-user:v1
   - docker tag udagram-frontend kiet112345/udagram-frontend:v1
